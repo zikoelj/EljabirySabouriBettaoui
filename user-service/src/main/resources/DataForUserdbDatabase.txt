@@ -1,0 +1,16 @@
+NB : Tout d'abord, il faut récupérer depuis la base de données l'utilisateur ayant le rôle d'administrateur, car il n'existe pas de moyen de l'ajouter avec cette autorité depuis le frontend.
+Par défaut, l'utilisateur créé depuis le frontend possède l'autorité "customer".
+Si vous souhaitez lui attribuer l'autorité d'administrateur, vous devez modifier l'id_claim dans la table user en le remplaçant par l'ID correspondant à l'autorité "admin" dans la table claim.
+
+---------------------------------------
+
+INSERT INTO `user-db`.claim (claim_name)
+VALUES ('CUSTOMER');
+INSERT INTO `user-db`.claim (claim_name)
+VALUES ('ADMIN');
+
+
+INSERT INTO `user-db`.user (email, full_name, password, claim_claim_id)
+VALUES ('customer@customer.test', 'customer', '$2a$10$ecsQeT8H9hG9SfycRMZCUezN8w3SrzXFlTrsjwxa2yjgbmnnoo8KS', 1);
+INSERT INTO `user-db`.user (email, full_name, password, claim_claim_id)
+VALUES ('admin@admin.test', 'admin', '$2a$10$ecsQeT8H9hG9SfycRMZCUezN8w3SrzXFlTrsjwxa2yjgbmnnoo8KS', 2);
