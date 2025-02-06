@@ -1,2 +1,6 @@
 .idea/*
+<<<<<<< HEAD
 configure-repo/*
+=======
+config-repo/*
+>>>>>>> 643cd9b88712d378bb75680cc42e22ab770302b3
