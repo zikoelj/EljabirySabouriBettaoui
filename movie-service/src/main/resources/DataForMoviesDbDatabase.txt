@@ -1,0 +1,35 @@
+Veuillez executer ces commandes pour mettre les donnees en base de donnees .
+Et respectez vous cet ordre de l'execution pour ne pas violer les contraintes
+
+----------------------------------------------------------------------------------------------------------
+
+INSERT INTO cine_vision.category (category_name) VALUES('action');
+INSERT INTO cine_vision.category (category_name) VALUES('drama');
+INSERT INTO cine_vision.category (category_name) VALUES('comedie');
+
+
+INSERT INTO cine_vision.director (director_name) VALUES('Faouzi Bensaïdi');
+INSERT INTO cine_vision.director (director_name) VALUES('Rachid El Ouali ');
+INSERT INTO cine_vision.director (director_name) VALUES('Alaa Akaaboune ');
+
+
+INSERT INTO cine_vision.city (city_name, movie_id) VALUES('sale', 1);
+INSERT INTO cine_vision.city (city_name, movie_id) VALUES('rabat', 2);
+INSERT INTO cine_vision.city (city_name, movie_id) VALUES('casablanca', 3);
+
+INSERT INTO cine_vision.actor (actor_name, movie_movie_id) VALUES('Rachid El Ouali', 1);
+INSERT INTO cine_vision.actor (actor_name, movie_movie_id) VALUES('Mouna Fettou', 2);
+INSERT INTO cine_vision.actor (actor_name, movie_movie_id) VALUES('Jean-Claude Van Damme', 3);
+
+
+INSERT INTO cine_vision.actor_image (image_url, actor_actor_id) VALUES('https://rb.gy/n2dydr', 1);
+INSERT INTO cine_vision.actor_image (image_url, actor_actor_id) VALUES('https://rb.gy/pobgdw', 2);
+INSERT INTO cine_vision.actor_image (image_url, actor_actor_id) VALUES('https://rb.gy/80rk0c', 3);
+
+INSERT INTO cine_vision.movie (description, duration, is_display, movie_name, movie_trailer_url, release_date, category_id, director_id)
+VALUES('Les chevaux de Dieu (2012)', 120, 1, 'Les chevaux de Dieu (2012)', 'https://www.youtube.com/embed/vzamrZLkfzM', '2022-05-10 00:00:00', 1, 1);
+INSERT INTO cine_vision.movie (description, duration, is_display, movie_name, movie_trailer_url, release_date, category_id, director_id)
+VALUES('Marock (2005)Marock (2005).', 105, 1, 'Marock (2005)', 'https://www.youtube.com/embed/-rPtbnW6MbQ', '2012-06-15 00:00:00', 2, 2);
+
+INSERT INTO cine_vision.movie_image (image_url, movie_movie_id) VALUES('https://rb.gy/0iznxz', 1);
+INSERT INTO cine_vision.movie_image (image_url, movie_movie_id) VALUES('https://rb.gy/gzvn6l', 2);
